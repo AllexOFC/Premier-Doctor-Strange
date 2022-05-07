@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="parallax.css">
+    <title>Premier</title>
+</head>
+<body>
+    <div class="parallax-wrapper">
+        <div class="parallax-group intro-screen" id="intro">
+            <img class="logo" src="logo1.png" alt="">
+        </div>
+        <div class="parallax-group" id="group-1">
+            <div class="parallax-layer base-layer">
+                <img class="background" src="bg4.jpg" alt="">
+            </div>
+            <div class="parallax-layer mid-layer" id="mid-layer">
+                <img class="logo1" src="logo.png" alt="">
+                <div class="infos">
+                    <div class="poster-info">
+                        <div class="poster">
+                            <img class="poster-img" src="unknown.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h4>Genres:</h4>
+                            <h6>Action <br> Adventure <br> Fantasy</h6><br> 
+                            <h4>Duration:</h4>
+                            <h6>2h 6min</h6><br><br><br><br><br>
+                            <h4>Rating:</h4>
+                            <h6>14</h6>
+                        </div>
+                    </div>
+                    <div class="general">
+                        <div class="synopsis">
+                            <h4>Synopsis:</h4>
+                            <h6>
+                                "To restore a world where everything is changing, Strange seeks help from his ally Wong, the Sorcerer Supreme, and the Avengers' 
+                                most powerful Scarlet Witch, Wanda. But a terrible threat looms over humanity and the entire universe that no longer can be done 
+                                by their power alone. Even more surprising, the greatest threat in the universe looks exactly like Doctor Strange."
+                            </h6>
+                        </div>
+                        <div class="general2">
+                            <div class="buy-area">
+                                <div class="buy-now">
+                                    <a class="buy-btn" href="">
+                                        Buy now
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="characters" data-tilt-axis="x">
+                                <span data-tilt></span>
+                                <img class="strange-img" src="strange.png" alt="">
+                                <img class="scarlet-img" src="Scarlet witch2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-group" id="group-2">
+        </div>
+        <div class="parallax-layer top-layer" id="top-layer">
+            <div class="wanda-area">
+                <div class="line">
+                </div>
+                <div class="line2">
+                </div>
+                <div class="wanda-tilt" data-tilt-axis="x">
+                    <img class="wanda-img" src="Scarlet witch.png" alt="">
+                    <img class="wanda-shadow" src="Scarlet witch.png" alt="">
+                    <img class="wanda-shadow2" src="Scarlet witch.png" alt="">
+                </div>
+                <div class="wanda-info">
+                    <div class="name">
+                        <h4>Wanda Maximoff</h4>
+                    </div>
+                    <div class="info-general">
+                        <h6>Elizabeth Olsen</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="strange-area">
+                <div class="line1">
+                </div>
+                <div class="line3">
+                </div>
+                <div class="strange-tilt" data-tilt-axis="x">
+                    <img class="doctor-img" src="Doutor-estranho-png.png" alt="">
+                    <img class="doctor-shadow" src="Doutor-estranho-png.png" alt="">
+                    <img class="doctor-shadow2" src="Doutor-estranho-png.png" alt="">
+                </div>
+                <div class="strange-info">
+                    <div class="name">
+                        <h4>"Doctor" Stephen Strange</h4>
+                    </div>
+                    <div class="info-general">
+                        <h6>Benedict Cumberbatch</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-group outro-screen" id="outro">
+            The end
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="tilt.jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.characters').tilt({
+            })
+        })
+        $(document).ready(function(){
+            $('.wanda-tilt').tilt({
+                scale: 1.1
+            })
+        })
+        $(document).ready(function(){
+            $('.strange-tilt').tilt({
+                scale: 1.1
+            })
+        })
+    </script>
+</body>
+</html>
