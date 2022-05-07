@@ -9,12 +9,13 @@ body{
 }
 .parallax-wrapper{
     height: 100vh;
-    min-height: 600px;
-    min-width: 1000px;
+    width: 100%;
+    min-height: 500px;
+    min-width: 900px;
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 300px;
-    background: black;
+    background: linear-gradient(330deg,black, rgb(46, 0, 0), rgb(21, 0, 0), black, black);
     padding-bottom: -800px;
 }
 .intro-screen{
@@ -46,8 +47,6 @@ body{
     height: 100%;
     width: 100%;
 }
-
-
 .mid-layer{
     transform: translateZ(100px) translateY(860px) translateX(3px) scale(0.66);
     background: rgba( 0, 0, 0, 0.05 );
@@ -61,6 +60,9 @@ body{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+.mid-layer:hover{
+    overflow: visible;
 }
 .logo1{
     height: 25%;
@@ -114,13 +116,17 @@ body{
     height: 49.4%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: baseline;
 }
 .characters{
-    margin-left: 30%;
     height: 100%;
-    width: 75%;
+    width: 40%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 17.5%;
 }
 .buy-area{
     height: 40%;
@@ -150,30 +156,32 @@ body{
     background: rgba(255, 0, 0, 0.184);
 }
 .strange-img{
-    height: 1400px;
-    width: 1150px;
+    width: 40vw;
+    min-width: 500px;
     position: absolute;
     display: block;
-    left: calc(150px + 5%);
     transition: ease-out .5s;
+    margin-left: 70%;
+    transform: translateY(20px);
 }
 .mid-layer:hover .strange-img{
     transform: translateY(-50px) translateX(-20px);
 }
 .scarlet-img{
-    height: 1500px;
-    width: 650px;
+    width: 20vw;
+    min-width: 200px;
     position: absolute;
     display: block;
     transition: ease-out .5s;
-    transform: rotateY(180deg) translateY(-20px);
-    left: calc(150px + 45%)
+    transform: translateY(-20px);
+    left: -40px;
 }
 .mid-layer:hover .scarlet-img{
-    transform: translateY(-70px) rotateY(180deg) translateX(-50px);
+    transform: translateY(-70px) translateX(-50px);
 }
 .top-layer{
     height: 90vh;
+    min-height: 800px;
     transform: translateY(343vh) translateZ(-100px) scale(1.33);
     display: flex;
     overflow: hidden;
@@ -201,12 +209,11 @@ body{
     -webkit-backdrop-filter: blur( 10px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     transform: rotate(-80deg) translateX(-360px) translateY(600px);
-    z-index: 1;
+    z-index: -1;
 }
 .wanda-area{
     height: 100%;
     width: 50%;
-    overflow: hidden;
 }
 .wanda-img{
     height: 100%;
@@ -264,7 +271,6 @@ body{
     top: -20px;
     left: -120px;
     transition: ease-in 1.3s;
-    z-index: 1;
 }
 .wanda-area:hover .wanda-shadow{
     height: 90%;
@@ -279,7 +285,6 @@ body{
     top: 60px;
     left: -40px;
     transition: ease-in 1.5s;
-    z-index: 0;
 }
 .wanda-area:hover .wanda-shadow2{
     height: 80%;
@@ -310,18 +315,16 @@ body{
     -webkit-backdrop-filter: blur( 10px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     transform: rotate(-87deg) translateX(-360px) translateY(600px);
-    z-index: 1;
+    z-index: -1;
 }
 .strange-area{
     height: 100%;
     width: 50%;
-    overflow: hidden;
 }
 .doctor-img{
     height: 78%;
     position: absolute;
     top: 200px;
-    left: 30%;
     transition: ease-in 1s;
     z-index: 2;
 }
@@ -342,6 +345,9 @@ body{
 .strange-tilt{
     height: 100%;
     width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .strange-area:hover .strange-info{
     opacity: 1;
@@ -356,9 +362,7 @@ body{
     filter: grayscale(50%);
     opacity: 0;
     top: 200px;
-    left: 250px;
     transition: ease-in 1.3s;
-    z-index: 1;
 }
 .strange-area:hover .doctor-shadow{
     height: 68%;
@@ -371,23 +375,104 @@ body{
     filter: grayscale();
     opacity: 0;
     top: 260px;
-    left: 290px;
     transition: ease-in 1.5s;
-    z-index: 0;
 }
 .strange-area:hover .doctor-shadow2{
     height: 58%;
     opacity: 0.3;
-    transform: translateY(50px) translateX(180px);
+    transform: translateY(50px) translateX(130px);
 }
-
-
 .outro-screen{
-    height: 100vh;
-    background-color: #242424;
+    margin-top: 41vh;
+    height: 59vh;
+    overflow: hidden;
     transform: translateY(210vh);
 }
-
+.bg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.bg img{
+    margin-left: 10%;
+    width: 80%;
+    height: 80%;
+}
+.glass{
+    height: 60%;
+    width: 100%;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1;
+}
+.line4{
+    height: 130%;
+    width: 367px;
+    position: absolute;
+    background: rgba(82, 0, 0, 0.156);
+    box-shadow: 0 8px 32px 0 rgba(255, 0, 0, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transform: rotate(-10deg) translateX(-75px) translateY(-30px);
+    z-index: 3;
+}
+.line5{
+    height: 130%;
+    width: 430px;
+    position: absolute;
+    right: 0;
+    background: rgba(255, 77, 0, 0.156);
+    box-shadow: 0 8px 32px 0 rgba(255, 149, 0, 0.587);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transform: rotateX(180deg) rotate(-14deg) translateX(100px) translateY(50px);
+    z-index: 0;
+}
+.contacts{
+    height: 80%;
+    width: 20%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    z-index: 3;
+}
+footer{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    color: rgba(211, 211, 211, 0.138);
+    font-size: 40px;
+    z-index: 10;
+}
+footer a{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 30px;
+    color: rgba(211, 211, 211, 0.138);
+    transition: ease-out .2s;
+}
+footer a:hover{
+    color: rgba(211, 211, 211, 0.658);
+}
 #intro{
     z-index: 10;
 }
@@ -405,7 +490,7 @@ body{
     z-index: 0;
 }
 #outro{
-    z-index: -10;
+    z-index: 10;
 }
 ::-webkit-scrollbar-track {
     background-color: rgba(18, 18, 18, 0.421);
