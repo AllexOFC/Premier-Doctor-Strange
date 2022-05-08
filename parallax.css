@@ -6,12 +6,12 @@ body{
     font-family: sans-serif;
     font-size: 4em;
     color: white;
+    min-height: 100px;
 }
 .parallax-wrapper{
     height: 100vh;
     width: 100%;
-    min-height: 500px;
-    min-width: 900px;
+    min-width: 1450px;
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 300px;
@@ -25,6 +25,7 @@ body{
 .parallax-group{
     position: relative;
     height: 100vh;
+    min-height: 800px;
     transform-style: preserve-3d;
 }
 .parallax-layer{
@@ -32,15 +33,13 @@ body{
     inset: 0;
 }
 /*Scale-calc: 1+((Z transform value * -1)/perspective)*/
-
+.base-layer{
+    height: 200%;
+    width: 100%;
+    transform: translateZ(-600px) scale(3.1);
+}
 .logo{
     height: 100%;
-    width: 100%;
-}
-
-.base-layer{
-    transform: translateZ(-600px) scale(3.1);
-    height: 200%;
     width: 100%;
 }
 .background{
@@ -181,8 +180,8 @@ body{
 }
 .top-layer{
     height: 90vh;
-    min-height: 800px;
-    transform: translateY(343vh) translateZ(-100px) scale(1.33);
+    min-height: 1200px;
+    transform:translateZ(-100px) scale(1.33) translateY(114vh);
     display: flex;
     overflow: hidden;
 }   
@@ -383,10 +382,9 @@ body{
     transform: translateY(50px) translateX(130px);
 }
 .outro-screen{
-    margin-top: 41vh;
     height: 59vh;
     overflow: hidden;
-    transform: translateY(210vh);
+    transform: translateY(170vh);
 }
 .bg{
     height: 100%;
@@ -397,10 +395,10 @@ body{
 .bg img{
     margin-left: 10%;
     width: 80%;
-    height: 80%;
+    height: 77%;
 }
 .glass{
-    height: 60%;
+    height: 61%;
     width: 100%;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -417,19 +415,19 @@ body{
 }
 .line4{
     height: 130%;
-    width: 367px;
+    width: 365px;
     position: absolute;
     background: rgba(82, 0, 0, 0.156);
     box-shadow: 0 8px 32px 0 rgba(255, 0, 0, 0.37);
     backdrop-filter: blur( 10px );
     -webkit-backdrop-filter: blur( 10px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    transform: rotate(-10deg) translateX(-75px) translateY(-30px);
+    transform: rotate(-10deg) translateX(-20%) translateY(-10%);
     z-index: 3;
 }
 .line5{
     height: 130%;
-    width: 430px;
+    width: 431px;
     position: absolute;
     right: 0;
     background: rgba(255, 77, 0, 0.156);
@@ -459,6 +457,7 @@ footer{
     bottom: 0;
     color: rgba(211, 211, 211, 0.138);
     font-size: 40px;
+    cursor: default;
     z-index: 10;
 }
 footer a{
@@ -481,10 +480,6 @@ footer a:hover{
 }
 #group-1 .base-layer{
     z-index: -5;
-}
-#group-2{
-    display: none;
-    z-index: 3;
 }
 #top-layer{
     z-index: 0;
